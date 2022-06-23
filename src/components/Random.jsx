@@ -1,36 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import {dictionaryJapanese, dictionaryEnglish, tense, simplePast, politeForm, teForm, simpleNegative} from '../verb-contents'
 import Navbar from './Navbar';
+import {FiHelpCircle} from 'react-icons/fi'
 
 
 
 function Random(){
 
 
+  
+  let initialRandomTense = Math.floor(Math.random()*tense.length)
+  let initialRandom = Math.floor(Math.random()*dictionaryJapanese.length)
 
-  let randomTense = Math.floor(Math.random()*tense.length)
-  let random = Math.floor(Math.random()*dictionaryJapanese.length)
-
-  const [japaneseWord, setJapaneseWord] = useState(dictionaryJapanese[random])
-  const [englishWord, setEnglishWord] = useState(dictionaryEnglish[random])
+  const [japaneseWord, setJapaneseWord] = useState(dictionaryJapanese[initialRandom])
+  const [englishWord, setEnglishWord] = useState(dictionaryEnglish[initialRandom])
 
   const [input, setInput] = useState('')
   const [wrong, setWrong] = useState()
   const [correct, setCorrect] = useState()
 //   const [correct, setCorrect] = useState()
-  const [tenseDisplay, setTenseDisplay] = useState(tense[randomTense])
+  const [tenseDisplay, setTenseDisplay] = useState(tense[initialRandomTense])
   
-  const [polite, setPolite] = useState(politeForm[random])
-  const [simplePasts, setSimplePasts] = useState(simplePast[random])
-  const [teForms, setTeForms] = useState(teForm[random])
-  const [simpleNegatives, setSimpleNegatives] = useState(simpleNegative[random])
+  const [polite, setPolite] = useState(politeForm[initialRandom])
+  const [simplePasts, setSimplePasts] = useState(simplePast[initialRandom])
+  const [teForms, setTeForms] = useState(teForm[initialRandom])
+  const [simpleNegatives, setSimpleNegatives] = useState(simpleNegative[initialRandom])
   
+ 
 
 
-
-  function dictionaryForm(event){
+  function dictionaryForm(){
     
     console.log(japaneseWord)
     if(tenseDisplay === 'polite'){
@@ -46,14 +47,7 @@ function Random(){
       checker(simpleNegatives)
     }
    
-
-   
-   
-
-
-
    setInput('')
-   event.preventDefault() 
   }
 
 
@@ -63,46 +57,73 @@ function Random(){
     setCorrect(false)
   }
 
+
+  function setRandom(){
+    setPolite(politeForm[initialRandom])
+    setSimplePasts(simplePast[initialRandom])
+    setTeForms(teForm[initialRandom])
+    setSimpleNegatives(simpleNegative[initialRandom])
+
+    setTenseDisplay(tense[initialRandomTense])
+    setJapaneseWord(dictionaryJapanese[initialRandom])
+    setEnglishWord(dictionaryEnglish[initialRandom])
+  }
+
   
 
   function checker(tenseParam){
     
-    if(input === tenseParam){
-      
-     
+    if(input === tenseParam){       
       setCorrect(true)
       setTimeout(backToDefault, 700)
-
-    
-        setTenseDisplay(tense(randomTense))
-        setJapaneseWord(dictionaryJapanese(random))
-        setEnglishWord(dictionaryEnglish(random))
-      
-
-      
-
-      
-      
-
-      
-      
-      
-      
-        
+      setRandom()
+                   
     }else{
       setWrong(true)
-      setTimeout(backToDefault, 400)
+      setTimeout(backToDefault, 500)
     }
+  }
+
+  function giveUp(){
+    // setRandom()
+    if(tenseDisplay === 'polite'){
+      setInput(polite)
+    }
+    if(tenseDisplay === 'simple Past'){
+      setInput(simplePasts)
+    }
+    if(tenseDisplay === 'Te-form'){
+      setInput(teForms)
+    }
+    if(tenseDisplay === 'simple Negative'){
+      setInput(simpleNegatives)
+    }
+
   }
  
 
-
   function onChange(e){
-    setInput(e.target.value)
-
-    
-    
+    setInput(e.target.value)   
   }
+
+
+  const handleKeyDown = (event) => {
+    // enter key
+    if(event.keyCode === 13){
+      dictionaryForm()
+      event.preventDefault()
+    }
+  }
+
+
+  useEffect(()=> {
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  },)
+
  
 
 
@@ -116,16 +137,27 @@ function Random(){
         <h1 style={{color: wrong ? '#B10046' : correct && 'green'}}>Verb Conjugation Practice</h1>
         <div className='random' 
         style={{border: wrong ? '5px #B10046 solid' : correct && '5px green solid'}}>
+          
+          <div className='random-icon-parent'>
+            <div className='random-icon' onClick={giveUp}>
+              <FiHelpCircle size={'1.9em'}/>
+            </div>
+          </div>
+
           <h1>{japaneseWord}</h1>
           <h3>{englishWord}</h3>
           <h2>{tenseDisplay}</h2>
           
-          <form>
+          <div className='random-form'>   
             <input onChange={onChange} autoFocus='autofocus' value={input}></input> <br></br>
-            <button onClick={dictionaryForm} >submit</button>
-          </form>
+            <button onClick={dictionaryForm} >submit</button>        
+          </div>
           
         </div>
+        {/* <button onClick={giveUp}>I give up</button> */}
+        
+        
+        
       </div>
       
 

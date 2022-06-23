@@ -24,7 +24,7 @@ function Verb(){
     return <div className='inner-background'>
         <Navbar />
     
-    
+        <div className='verb-parent'>
     
         <header className='header'>
             
@@ -134,7 +134,7 @@ function Verb(){
 
  
 
-
+            </div>
       
         <Footer />
 

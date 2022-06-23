@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../images/japan-logo.jpg'
 
 function Navbar(){
 
-    const [hidden, setHidden] = useState(false)
+    // const [hidden, setHidden] = useState(false)
 
 
     
@@ -34,10 +34,16 @@ function Navbar(){
             
 
             {/* <div id={hidden ? 'hidden' : ''} onMouseOver={()=> setHidden(false)} onMouseOut={()=> setHidden(true)}> */}
-            <div class='nav-inline'>
+            {/* <div class='nav-inline'>
                 <NavLink className='link' exact to='/table' activeClassName="active">Table</NavLink>
-            </div>     
+            </div>      */}
             <div class='nav-inline'>
+                <NavLink className='link' exact to='/kana' activeClassName="active">Kana</NavLink>
+            </div>   
+            <div class='nav-inline'>
+                <NavLink className='link' exact to='/pos' activeClassName="active">PartsOfSpeech</NavLink>
+            </div>  
+            {/* <div class='nav-inline'>
                 <NavLink className='link' exact to='/verb' activeClassName="active">Verb</NavLink>
             </div>
             <div class='nav-inline' >
@@ -45,7 +51,7 @@ function Navbar(){
             </div>
             <div class='nav-inline'>
                 <NavLink className='link' exact to='/adverb' activeClassName="active">Adverb</NavLink>
-            </div>
+            </div> */}
             <div class='nav-inline'>
                 <NavLink className='link' exact to='/flashcard' activeClassName="active">Cards</NavLink>
             </div>

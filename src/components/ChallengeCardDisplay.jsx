@@ -3,10 +3,10 @@ import React from 'react'
 function ChallengeCardDisplay(props) {
   return (
     <div>
-        <h1>Day {props.day}</h1>
+        <h1 style={{textAlign: 'center', marginTop: '30px', fontWeight: '600', color: props.warning && '#711029'}}>Day {props.day}</h1>
            
 
-        <table className='content-table'>
+        <table className='content-table challenge-card' style={{backgroundColor: props.warning ? '#711029' : 'rgb(71, 69, 69)'}}>
                     {/* <thead>
                         <tr>                        
                             <th className='day-counter' colSpan='3'>{props.day}</th>                     

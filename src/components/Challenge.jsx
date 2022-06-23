@@ -13,6 +13,9 @@ import restartImage from '../images/itachi.jpg'
 import congratsAudio from '../audio/congrats.mp3'
 import restartAudio from '../audio/restart.mp3'
 import video from '../video/yowai.mkv'
+import {VscDebugRestart} from 'react-icons/vsc'
+import {FaTrophy} from 'react-icons/fa'
+
 
 function App() {
 
@@ -20,23 +23,37 @@ function App() {
   const audioRestart = new Audio(restartAudio)
 
   const data = JSON.parse(localStorage.getItem('card'))
-  
-//   const [input, setInput] = useState(0)
-  const [dayCounter, setDayCounter] = useState(1)
-  const [cardNumber, setCardNumber] = useState(data)
-  const [modal, setModal] = useState(false) 
-  const [complete, setComplete] = useState()
-  const [restart, setRestart] = useState()
-  const [playVideo, setPlayVideo] = useState()
 
-  
+
   useEffect(() => {
-    setDayCounter(data)
+    if(!data){
+      setDayCounter(1)
+    } else{
+      setDayCounter(data)
+    }  
   },[])
 
   useEffect(()=> {
     localStorage.setItem('card', JSON.stringify(dayCounter))
   })
+  
+  
+//   const [input, setInput] = useState(0)
+  const [dayCounter, setDayCounter] = useState(1)
+  const [cardNumber, setCardNumber] = useState(()=> {
+    if(!data){
+      return 1
+    } else {
+      return data
+    }
+  })
+  const [modal, setModal] = useState(false) 
+  const [complete, setComplete] = useState()
+  const [restart, setRestart] = useState()
+  const [playVideo, setPlayVideo] = useState()
+  const [warning, setWarning] = useState()
+  const [restartIcon, setRestartIcon] = useState()
+  const [completeIcon, setCompleteIcon] = useState()
 
 
  
@@ -47,7 +64,7 @@ function App() {
       setModal(false)  
       setCardNumber(card[dayCounter].day)
       audio.play()
-      audio.volume = 0.3
+      audio.volume = 0.27
     }
     
     if(restart){
@@ -141,15 +158,15 @@ function App() {
     <div className="challenge-parent">
       <Navbar/>
     <div className='challenge-intro'>
-        <h1>Challenge</h1>
-        <h2>This is called the 100 day Challenge the goal is to memorize 10 words per day for a total span of a 100 days</h2>
+        <h1>V Challenge</h1>
+        
     </div>
       
 
     <div >
     {playVideo && 
     <div className='video-overlay' >
-      <video style={{borderRadius: '100%', paddig: '0', marginTop: '50px', }}
+      <video style={{borderRadius: '100%', paddig: '0', marginTop: '50px',}}
       autoPlay src={video} muted height='auto' width='900px'></video>
     </div>
     }
@@ -164,12 +181,22 @@ function App() {
                         if(index+1<=dayCounter){
                           setCardNumber(index+1)
                         } else {
-                          alert('you have to finish the previous level')
+                          // alert('you have to finish DAY ' + dayCounter)
+                          setWarning(true)
+                          setTimeout(() => {
+                            setWarning(false)
+                          },1000)
+                          setCardNumber(dayCounter)
+                         
+                          
                         }
                         
                       }}
-              style={{backgroundColor: index  < dayCounter-1 && 'darkgreen', 
-                      color: index === dayCounter-1  && 'red',  
+              style={{backgroundColor: index  < dayCounter-1 && ' #237c50', 
+                      color: index < dayCounter-1  && 'black',
+                      borderRadius: index === dayCounter-1 && '50%',  
+                      border: index === dayCounter-1 && '0.5px solid green',
+                      fontSize: index === dayCounter-1 && '13px',
                       transform: index === dayCounter-1 && 'rotate(360deg)',
                                          
                       }}>{item.day}</div>
@@ -178,12 +205,15 @@ function App() {
     </div>
 
       <div className='monitor-button'>
-        <div className='complete-box'>
-          <label>CURRENT GOAL: </label>
-          <button className='complete-button' onClick={completeModal}>Day {dayCounter} complete</button>         
+        <div className='complete-box'> 
+          <button className='complete-button' onClick={completeModal} onMouseOver={()=>{setCompleteIcon(true)}} onMouseLeave={()=>setCompleteIcon(false)}>
+          {completeIcon ? <FaTrophy /> : `DAY ${dayCounter} COMPLETE`}
+          </button>         
         </div>
         
-        <button className='restart-button' onClick={restartModal}>restart</button>
+        <button className='restart-button' onClick={restartModal} onMouseOver={()=>{setRestartIcon(true)}} onMouseLeave={()=>setRestartIcon(false)}>
+        {restartIcon ? <VscDebugRestart /> : `RESTART`}
+        </button>
       </div>
 
       
@@ -211,7 +241,8 @@ function App() {
           
           return <ChallengeCardDisplay 
            
-            day = {item.day}
+            day = {warning ? dayCounter : item.day}
+            warning = {warning}
 
                 nihongo1 = {item.nihongo1}
                 nihongo2 = {item.nihongo2}

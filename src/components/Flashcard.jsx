@@ -90,7 +90,7 @@ function Flashcard(){
 
     
         function generateRandomNumber(){
-             
+         
             setRandom(Math.floor(Math.random()*arrayValues))
             setCounter(random)        
             setFront(arrayNihongo[random])
@@ -128,6 +128,7 @@ function Flashcard(){
             // enter key
             if(event.keyCode === 13){
                 transform()
+                event.preventDefault()
             }
             // R key
             if(event.keyCode === 82){
@@ -151,12 +152,7 @@ function Flashcard(){
             
             <Navbar />
 
-            <div className='shortcut-key'>
-                <h2>Shortcut Key</h2>
-                <p><span className='keyboard'>R</span> <span>Start Random</span></p>
-                <p><span className='keyboard'>enter</span><span>Card Flip</span></p>
-                <p><span className='keyboard'>left arrow</span>/<span className='keyboard'>right arrow</span><span>Next or Previous</span></p>
-            </div>
+            
 
             <div className='flashcard-body'>
             
@@ -175,13 +171,21 @@ function Flashcard(){
 
             <div className='span'>
                 <span className='arrow' onClick={previousCard}>ᐊ</span>
-                <span> {counter+1}/{arrayEnglish.length} </span>
+                <span className='flashcard-count'> {counter+1}/{arrayEnglish.length} </span>
                 <span className='arrow' onClick={nextCard}>ᐅ</span>
             </div>
                 
             </div>
             
+            <div className='shortcut-key'>
+              
+                <div className='keys'>
+                    <p><span className='keyboard'>R</span> </p>
+                    <p><span className='keyboard'>enter</span> </p>
+                    <p><span className='keyboard'>left arrow</span> / <span className='keyboard'>right arrow</span> </p>
+                </div>
 
+            </div>
             
 
             <Footer />

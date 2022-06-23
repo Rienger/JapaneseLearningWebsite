@@ -10,7 +10,7 @@ function Footer(){
 
     return <div className='footer'>
         <div className='footer-content'>
-            <h3>nihongo master</h3>
+            <h3>Yana Nihongo</h3>
             <p>ito ay maingat at malubhasang nilikha ng mga batikang propesyonal sa aralin ng dayuhang linggwistika na nanggaling mula sa bansa ng katangi tanging husay at talino, eto ay ang Pilipinas.</p>
             <ul className='socials'>
                 <li><ion-icon name="logo-facebook"></ion-icon></li>

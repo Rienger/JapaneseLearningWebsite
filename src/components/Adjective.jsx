@@ -20,6 +20,7 @@ function Adjective(){
     return <div className='inner-background'>
         
         <Navbar />
+        <div className='adj-parent'>
        
         <header className='header'>
         
@@ -336,7 +337,7 @@ function Adjective(){
             
             </div>
 
-
+            </div>
             <Footer />
         
     </div>

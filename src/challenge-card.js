@@ -42,7 +42,7 @@ const card = [
         nihongo7: 'ちょうし は どう？',
         nihongo8: 'じゅうよう',
         nihongo9: 'あってる',
-        nihongo10: '🤔',
+        nihongo10: 'かいわ',
       
         english1: 'practice',
         english2: 'wrong',
@@ -53,7 +53,7 @@ const card = [
         english7: 'how are you doing?',
         english8: 'important',
         english9: 'correct',
-        english10: '🤔',
+        english10: 'conversation',
     }
     ,{
         day: 3,
@@ -67,7 +67,7 @@ const card = [
         nihongo7: 'けんさく',
         nihongo8: 'ひみつ',
         nihongo9: 'へんしん',
-        nihongo10: '🤔',
+        nihongo10: 'えがお',
       
         english1: 'skilled',
         english2: 'question',
@@ -78,7 +78,7 @@ const card = [
         english7: 'to search (internet)',
         english8: 'secret',
         english9: 'reply',
-        english10: '🤔',
+        english10: 'smile',
         
 
 
@@ -122,8 +122,8 @@ const card = [
         nihongo6: 'きもい',
         nihongo7: 'しょうじき',
         nihongo8: 'まなぶ',
-        nihongo9: '🤔',
-        nihongo10: '🤔',
+        nihongo9: 'やね',
+        nihongo10: 'さき',
       
         english1: 'problem',
         english2: 'worry',
@@ -133,8 +133,8 @@ const card = [
         english6: 'cringe',
         english7: 'honestly / actually',
         english8: 'to learn',
-        english9: '🤔',
-        english10: '🤔',
+        english9: 'roof',
+        english10: 'ahead (saki ni tabete kudasai)',
         
 
 
@@ -213,7 +213,7 @@ const card = [
         nihongo7: 'おみやげ',
         nihongo8: 'あける',
         nihongo9: 'しめる',
-        nihongo10: '🤔',
+        nihongo10: 'びょうき',
       
         english1: 'properly',
         english2: 'money',
@@ -224,7 +224,7 @@ const card = [
         english7: 'souvenir',
         english8: 'to open',
         english9: 'to close',
-        english10: '🤔',
+        english10: 'sickness / disease',
         
 
 
@@ -234,27 +234,27 @@ const card = [
     ,{
         day: 9,
 
-        nihongo1: '',
-        nihongo2: '',
-        nihongo3: '',
-        nihongo4: '',
-        nihongo5: '',
-        nihongo6: '',
-        nihongo7: '',
-        nihongo8: '',
-        nihongo9: '',
-        nihongo10: '',
+        nihongo1: 'つれて　いく',
+        nihongo2: 'いれる',
+        nihongo3: 'だす',
+        nihongo4: 'つもり',
+        nihongo5: 'ほとんど',
+        nihongo6: 'ぐうぜん',
+        nihongo7: 'じゃま',
+        nihongo8: 'しんりん',
+        nihongo9: 'どくしん',
+        nihongo10: 'ひとめ',
       
-        english1: '',
-        english2: '',
-        english3: '',
-        english4: '',
-        english5: '',
-        english6: '',
-        english7: '',
-        english8: '',
-        english9: '',
-        english10: '',
+        english1: 'to bring someone',
+        english2: 'to put something inside',
+        english3: 'to take out/to put out',
+        english4: 'intention',
+        english5: 'almost',
+        english6: 'coincidence',
+        english7: 'disturb',
+        english8: 'forest',
+        english9: 'single / unmarried',
+        english10: 'glimpse / glance',
 
     }
     
@@ -270,7 +270,7 @@ const card = [
         nihongo7: 'おこってる',
         nihongo8: 'てんき',
         nihongo9: 'ひくい',
-        nihongo10: '🤔',
+        nihongo10: 'きじ',
       
         english1: 'desk',
         english2: 'chair',
@@ -281,7 +281,7 @@ const card = [
         english7: 'to get angry',
         english8: 'weather',
         english9: 'low',
-        english10: '🤔',
+        english10: 'article',
         
 
 
@@ -299,8 +299,8 @@ const card = [
         nihongo6: 'だまる',
         nihongo7: 'とけい',
         nihongo8: 'にる',
-        nihongo9: '🤔',
-        nihongo10: '🤔',
+        nihongo9: 'ぶ',
+        nihongo10: 'おかし',
       
         english1: 'shoes',
         english2: 'carrot',
@@ -310,8 +310,8 @@ const card = [
         english6: 'to shut up',
         english7: 'clock',
         english8: 'to resemble someone',
-        english9: '🤔',
-        english10: '🤔',
+        english9: 'department',
+        english10: 'sweets / snacks',
         
 
 
@@ -325,23 +325,23 @@ const card = [
         nihongo2: 'ひこうき',
         nihongo3: 'のる',
         nihongo4: 'くち',
-        nihongo5: '🤔',
+        nihongo5: 'かぜ',
         nihongo6: 'やちん',
         nihongo7: 'ふとりました',
-        nihongo8: '🤔',
-        nihongo9: '🤔',
-        nihongo10: '🤔',
+        nihongo8: 'かす',
+        nihongo9: 'とる',
+        nihongo10: 'ようじ',
       
         english1: 'adult',
         english2: 'airplane',
         english3: 'to ride / to get on',
         english4: 'mouth',
-        english5: '🤔',
+        english5: 'wind',
         english6: 'rent',
         english7: 'got fat',
-        english8: '🤔',
-        english9: '🤔',
-        english10: '🤔',
+        english8: 'to lend',
+        english9: 'to take (to take a photo)',
+        english10: 'errand',
         
 
 
@@ -360,7 +360,7 @@ const card = [
         nihongo7: 'どう　おもいますか',
         nihongo8: 'まいあさ',
         nihongo9: 'きんちょう　する',
-        nihongo10: '🤔',
+        nihongo10: 'じゅぎょう',
       
         english1: 'place',
         english2: 'culture',
@@ -371,7 +371,7 @@ const card = [
         english7: 'what do you think?',
         english8: 'every morning',
         english9: 'to be nervous',
-        english10: '🤔',
+        english10: 'class',
         
 
 
@@ -388,9 +388,9 @@ const card = [
         nihongo5: 'かいぜん',
         nihongo6: 'きぶん',
         nihongo7: 'きゅうけい',
-        nihongo8: '🤔',
-        nihongo9: '🤔',
-        nihongo10: '🤔',
+        nihongo8: 'きっぷ',
+        nihongo9: 'のぼる',
+        nihongo10: 'きゃく',
       
         english1: 'chairman / head',
         english2: 'various',
@@ -399,9 +399,9 @@ const card = [
         english5: 'improvement',
         english6: 'feeling',
         english7: 'rest',
-        english8: '🤔',
-        english9: '🤔',
-        english10: '🤔',
+        english8: 'ticket',
+        english9: 'to climb',
+        english10: 'customer',
         
 
 
@@ -687,8 +687,8 @@ const card = [
         nihongo6: 'けっきょうく',
         nihongo7: 'かもしれない',
         nihongo8: 'かべ',
-        nihongo9: '🤔',
-        nihongo10: '🤔',
+        nihongo9: 'しんぶん',
+        nihongo10: 'じしょ',
       
         english1: 'garbage',
         english2: 'moon',
@@ -698,8 +698,8 @@ const card = [
         english6: 'in the end / after all',
         english7: 'it might',
         english8: 'wall',
-        english9: '🤔',
-        english10: '🤔',
+        english9: 'newspaper',
+        english10: 'dictionary',
         
 
 
@@ -893,7 +893,7 @@ const card = [
         nihongo2: 'すく',
         nihongo3: 'さげる',
         nihongo4: 'がまん　する',
-        nihongo5: '🤔',
+        nihongo5: 'そら',
         nihongo6: 'ふべん',
         nihongo7: 'デパト',
         nihongo8: 'ゆうびんきょうく',
@@ -904,7 +904,7 @@ const card = [
         english2: 'to be empty / hungry',
         english3: 'to lower',
         english4: 'to endure / to tolerate',
-        english5: '🤔',
+        english5: 'sky',
         english6: 'inconvenient',
         english7: 'department store',
         english8: 'post office',
@@ -1154,10 +1154,10 @@ const card = [
     ,{
         day: 40,
 
-        nihongo1: '',
-        nihongo2: '',
-        nihongo3: '',
-        nihongo4: '',
+        nihongo1: 'せいふ',
+        nihongo2: 'いたい',
+        nihongo3: 'みみ',
+        nihongo4: 'めがね',
         nihongo5: '',
         nihongo6: '',
         nihongo7: '',
@@ -1165,10 +1165,10 @@ const card = [
         nihongo9: '',
         nihongo10: '',
       
-        english1: '',
-        english2: '',
-        english3: '',
-        english4: '',
+        english1: 'government',
+        english2: 'painful',
+        english3: 'ear',
+        english4: 'eyeglasses',
         english5: '',
         english6: '',
         english7: '',
