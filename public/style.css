@@ -962,11 +962,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: aliceblue;
   height: 500px;
   width: 800px;
   z-index: 1000;
-  border: 5px lightcyan solid;
+  border: 5px rgb(22, 109, 109) solid;
   border-radius: 5px;
   
   background-size: cover;
@@ -975,10 +974,12 @@
 }
 
 .modal-container h1{
-  width: 55%;
-  margin: 35px 0 0 20px;
+  width: 48%;
+  margin: 50px 0 0 30px;
   background-color: transparent;
-  color: white;
+  color: rgb(39, 16, 31);
+  font-size: 22px;
+  font-weight: 600;
   
 }
 

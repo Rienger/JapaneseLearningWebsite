@@ -9,7 +9,7 @@ import ChallengeCardDisplay from './ChallengeCardDisplay';
 import rightArrow from '../images/right-arrow.png'
 import leftArrow from '../images/left-arrow.png'
 import completionImage from '../images/areyousure.jpeg'
-import restartImage from '../images/itachi.jpg'
+import restartImage from '../images/demon.png'
 import congratsAudio from '../audio/congrats.mp3'
 import restartAudio from '../audio/restart.mp3'
 import video from '../video/yowai.mkv'
