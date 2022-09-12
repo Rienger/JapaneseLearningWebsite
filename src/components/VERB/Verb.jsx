@@ -1,9 +1,9 @@
 import React from 'react'
 // import { useNavigate } from 'react-router-dom'
-import chise from '../images/chise-hatori.jpg'
-import Footer from './Footer'
-import magus from '../audio/magus.mp3'
-import Navbar from './Navbar'
+import chise from '../../images/chise-hatori.jpg'
+import Footer from '../Footer'
+import magus from '../../audio/magus.mp3'
+import Navbar from '../Navbar'
 
 
 function Verb(){

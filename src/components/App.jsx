@@ -2,10 +2,6 @@ import React from 'react'
 import Verify from './Verify';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Display from './Display';
-import Noun from './Noun';
-import Verb from './Verb';
-import Adjective from './Adjective';
-import Adverb from './Adverb';
 import Flashcard from './Flashcard'
 import Card from './Card'
 import Random from './Random';
@@ -16,6 +12,20 @@ import Quotes from './Quotes'
 import Kana from './Kana'
 import Partsofspeech from './Partsofspeech';
 import ScrollToTop from './ScrollToTop';
+
+import Noun from './NOUN/Noun';
+import Numbers from './NOUN/Numbers'
+import Time from './NOUN/Time'
+import Counters from './NOUN/Counters';
+import FamilyWords from './NOUN/FamilyWords';
+
+import Verb from './VERB/Verb';
+
+import Adjective from './ADJECTIVE/Adjective';
+
+import Adverb from './ADVERB/Adverb';
+
+import Kanji from './KANJI/Kanji';
 
 
 
@@ -29,11 +39,7 @@ function App(){
             
                 <Route path='/' element={<Verify />}></Route>
                 <Route path='/home' element={<Home />}></Route>
-                <Route path='/table' element={<Display />}></Route>
-                <Route path='/noun' element={<Noun />}></Route>
-                <Route path='/verb' element={<Verb />}></Route>
-                <Route path='/adjective' element={<Adjective />}></Route>
-                <Route path='/adverb' element={<Adverb />}></Route>
+                <Route path='/table' element={<Display />}></Route>  
                 <Route path='/flashcard' element={<Flashcard />}></Route>
                 <Route path='/card' element={<Card />}></Route>
                 <Route path='/random' element={<Random />}></Route>
@@ -42,6 +48,20 @@ function App(){
                 <Route path='/kana' element={<Kana />}></Route>
                 <Route path='/quotes' element={<Quotes />}></Route>
                 <Route path='/pos' element={<Partsofspeech />}></Route>
+
+                <Route path='/pos/noun/intro' element={<Noun />}></Route>
+                <Route path='/pos/noun/numbers' element={<Numbers />}></Route>
+                <Route path='/pos/noun/time' element={<Time />}></Route>
+                <Route path='/pos/noun/counters' element={<Counters />}></Route>
+                <Route path='/pos/noun/family-words' element={<FamilyWords />}></Route>
+
+                <Route path='/pos/verb' element={<Verb />}></Route>
+
+                <Route path='/pos/adjective' element={<Adjective />}></Route>
+
+                <Route path='/pos/adverb' element={<Adverb />}></Route>
+
+                <Route path='/kanji' element={<Kanji />}></Route>
 
             </Routes>         
            

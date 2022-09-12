@@ -245,7 +245,7 @@
     text-align: center;
     max-width: 950px;
     margin: auto;
-    height: 1000px;
+    height: 800px;
 
     
   }
@@ -261,39 +261,80 @@
 
   .pos-div{
     width: 200px;
+    height: 450px;
+    border-radius: 7px;
+    color: tan;
+    box-shadow: 7px 5px 2px rgba(0,0,0,0.7);
+    transition: 0.3s;
   }
 
-  .pos-category h2{
+  .pos-div h2{
+    margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 600;
   }
 
-  .pos-category button{
-    font-size: 16px;
-    width: 170px;
-    margin: 3px 0;
-    border-radius: 3px; 
-    color: tan;
+  .pos-div-icon{
+    font-size: 40px;
   }
 
-  .pos-category button:hover{
-    color:rgb(223, 150, 15)
+  .pos-div-hide{
+    visibility: hidden;
   }
 
-  .pos-noun button{
+  .pos-div-display{
+    visibility: visible;
+  }
+
+  .pos-div:hover, .sentence-structure:hover{
+    color:rgb(223, 150, 15);
+    cursor: pointer;
+    background-color: rgba(29, 25, 25, 0.9);
+    transition: 0.4s;
+    box-shadow: none;
+  
+  }
+
+
+
+  .pos-noun{
     background-color: rgb(67, 97, 63);
   }
 
-  .pos-verb button{
+  .pos-verb{
     background-color: rgb(97, 63, 94);
   }
 
-  .pos-adj button{
+  .pos-adj{
     background-color: rgb(97, 82, 63);
   }
 
-  .pos-adv button{
+  .pos-adv{
     background-color: rgb(63, 63, 97);
+  }
+
+  .sentence-structure{
+    margin: auto;
+    margin-top: 50px;
+    width: 700px;
+    height: 200px;
+    color: tan;
+    background-color: rgb(63, 97, 94);
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 7px 5px 3px rgba(0,0,0,0.7);
+    
+
+  }
+
+  .sentence-structure h2{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .sentence-structure .pos-div-icon{
+    font-size: 50px;
   }
 
 
@@ -386,9 +427,67 @@
   /* background-image: linear-gradient(to bottom, #eedbd4, #e0bcb4, #d19c99, #c17d84, #ae5e74, #ac4e6b, #a93c62, #a52759, #b2184c, #bd053b, #c40027, #c70909); */
 
 
+  /* TOPIC DIVISION *******************************************/
+
+  .topic-division {
+    display: flex;
+  }
+
+  .vertical-topic{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .node{
+    display: flex;
+    background-color: rgb(67, 97, 63);
+    color: tan;
+    border-top: solid 1px black;
+    border-radius: 2px;
+    height: 25px;
+    font-size: 12px;
+    width: 150px;
+    align-items: center;
+    text-decoration: none;
+   
+   
+  }
+
+  .node:hover{
+   
+    border-top: 1px solid black;
+    padding: 7px;
+    transition: 0.5s ease;
+  }
+
+  .node-content{
+    margin-left: 10px;
+  }
+
+  .vertical-topic button:hover{
+    color: gold;
+    position: static;
+  }
+
+  .active-node{
+    text-decoration: none;
+    color: black;
+  }
+
+  
+
   /* NOUN DISPLAY ********************************************/
 
- 
+  .noun-content {
+    margin: auto;
+  }
+
+
+  .japanese-column{
+    display: flex;
+    flex-direction: column;
+  }
 
 
 
@@ -531,8 +630,228 @@
   }
 
 
+  /* KANJI *****************************************************/
+
+  .kanji-component {
+    margin: auto;
+    width: 1300px;
+    color: black;
+    margin-bottom: 300px;
+  }
+
+  .kanji-margin {
+    margin: 0 50px;
+    
+  }
+
+  .kanji-header h1{
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 40px;
+
+  }
+
+  .kanji-header h3{
+    font-size: 17px;
+    margin-top: 15px;
+    line-height: 22px;
+
+  }
+
+  .kanji-dropdown {
+    display: flex;
+    margin-top: 20px;
+    height: 35px; 
+  }
+
+  .kanji-dropdown h3{
+    position: relative;
+    bottom: 10px;
+  }
+
+  .kanji-dropdown-column{
+    margin-left: 10px;  
+  }
+
+  .kanji-dropdown-button{
+    display: flex;
+    position: relative;
+    padding: 3px 7px;
+    background-color: rgba(204, 170, 142, 0.308);
+    cursor:default;
+    border: solid 0.5px rgb(139, 103, 103);
+    width: 170px;
+
+  }
+
+  .kanji-dropdown-icon{
+    position: absolute;
+    right: 10px;
+    font-size: 17px;
+  }
+
+  .kanji-show{
+    position: relative;
+    visibility: visible;
+    background-color: rgb(170, 150, 134);
+    border: solid 0.5px rgb(175, 50, 50);
+    z-index: 100;
+    font-size: 11px;
+  }
 
 
+  .kanji-show h2{
+    position: relative;
+    left: 5px;
+  }
+  
+
+  .kanji-show div:hover{
+    background-color: rgb(7, 97, 85);
+  }
+
+ 
+
+  .kanji-hide{
+   
+    visibility: hidden;
+     
+   
+  }
+
+  .kanji-content{
+    display: flex;
+  }
+
+  .kanji-characters{
+    width: 60%;
+  }
+
+  .kanji-characters p{
+    padding: 2px;
+  }
+
+
+  .kanji-column {
+    display: flex;
+   
+  
+    
+  }
+
+  .kanji-column p{
+    font-size: 24px;
+    margin-right: 25px;
+    margin-top: 10px;
+    height: 37px;
+    color: black;
+    
+    
+  }
+
+  .kanji-column p:hover{
+    cursor: pointer;
+    color:rgb(177, 30, 86);
+    /* color:rgb(128, 21, 80); */
+    border-radius: 5px;
+    background-color: rgba(161, 149, 149, 0.521);
+    /* background-color: rgb(170, 154, 154); */
+    transition: 0.4s;
+    
+  }
+
+  .kanji-explanation{
+    width: 20%
+
+  }
+
+  .kanji-explanation-card{
+    
+    width: 400px;
+    height: 410px;
+    background-color: rgba(188, 190, 157, 0.596);
+    /* background-color: rgba(157, 160, 117, 0.596); */
+    box-shadow: 3px 3px rgba(73, 71, 71, 0.5);
+    border-radius: 10px; 
+    color: rgb(36, 29, 20);
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: solid 2px rgb(54, 104, 61);
+
+  }
+
+  .kanji-upper-row{
+    display: flex;
+  }
+
+  .kanji-explanation-meaning{
+    font-weight: 600;
+    font-size: 16px;
+    
+  }
+
+  .kanji-lower-row div{
+    margin: 17px;
+  }
+
+ 
+
+  .kanji-explanation-leftColumn, .kanji-explanation-rightColumn{
+    line-height: 1.5em;
+    margin-top: 17px;
+  }
+
+  .kanji-explanation-leftColumn{
+    margin-left: 20px;
+    height: 100px;
+  }
+
+  .kanji-explanation-rightColumn{
+    margin-left: 25px;
+    margin-right: 20px;
+  }
+
+
+
+  
+
+  @media screen and (max-width: 1200px){
+    .kanji-component{
+      width: 900px;
+    }
+
+    .kanji-margin{
+      margin: 0;
+    }
+
+    .kanji-column p{
+      margin-right: 17px;   
+    }
+
+    .kanji-characters{
+      width: 57%;
+    }
+
+    .kanji-characters p{
+      font-size: 21px;
+      padding: 0;
+    }
+  }
+
+  .kanji-test{
+    display: flex;
+  }
+
+  .kanji-test div{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(77, 58, 58);
+  }
+
+  .kanji-test div:hover{
+    cursor: pointer;
+  }
 
 
   /* TEST ******************************************************/
@@ -1030,23 +1349,26 @@
 
 .modalButton-container .confirm-button {
   border: solid 3px green;
+  
 }
 
 .confirm-button:hover{
-  border: 2px black solid;
-  background-color: green;
+  /* border: 2px black solid; */
+  background-color: rgb(63, 97, 63);;
   cursor: pointer;
   color: white;
   
 }
 
+
+
 .modalButton-container .cancel-button {
-  border: 3px solid red;
+  border: 3px solid rgb(197, 50, 50);
 }
 
 .cancel-button:hover{
-  border: 2px black solid;
-  background-color: rgb(209, 62, 86);
+  /* border: 2px black solid; */
+  background-color: rgb(153, 47, 47);
   cursor: pointer;
   
   
@@ -1177,11 +1499,13 @@
 
 .active{
   color: rgb(209, 62, 86);
- 
+  text-decoration: none;
  
   
   
 }
+
+
 
 .abs-left {
   flex: 25%

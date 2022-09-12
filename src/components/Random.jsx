@@ -73,7 +73,7 @@ function Random(){
 
   function checker(tenseParam){
     
-    if(input === tenseParam){       
+    if(input.toLowerCase() === tenseParam){       
       setCorrect(true)
       setTimeout(backToDefault, 700)
       setRandom()
@@ -92,7 +92,7 @@ function Random(){
     if(tenseDisplay === 'simple Past'){
       setInput(simplePasts)
     }
-    if(tenseDisplay === 'Te-form'){
+    if(tenseDisplay === 'Te-form'){ 
       setInput(teForms)
     }
     if(tenseDisplay === 'simple Negative'){

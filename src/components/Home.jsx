@@ -14,7 +14,7 @@ function Home() {
         
           <div className='home-mission'>
             <h1>Yana Nihongo</h1>
-            <p>The goal of Yana Nihongo is to be able to provide study resources and introduce challenges to make learning more fun and interactive. We desire to lay the main foundation of your Japanese learning process and also impart guides on how to start as a beginner.</p>
+            <p>The goal of Yana Nihongo is to be able to provide study resources and introduce challenges to make learning more fun and interactive. We desire to lay the main foundation of your Japanese learning framework and also impart guides on how to start as a beginner.</p>
           </div>
             
 

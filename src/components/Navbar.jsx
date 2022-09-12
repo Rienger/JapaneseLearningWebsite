@@ -64,6 +64,9 @@ function Navbar(){
             <div class='nav-inline'>
                 <NavLink className='link' exact to='/challenge' activeClassName="active">Challenge</NavLink>          
             </div>  
+            <div class='nav-inline'>
+                <NavLink className='link' exact to='/kanji' activeClassName="active">Kanji</NavLink>          
+            </div>  
             {/* </div> */}
            
         </div>         

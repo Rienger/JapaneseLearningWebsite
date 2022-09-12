@@ -1,9 +1,9 @@
 import React from 'react'
 // import { useNavigate } from 'react-router-dom'
-import howl from '../images/howl.jpg'
-import Footer from './Footer'
-import howlAudio from '../audio/how-finale.mp3'
-import Navbar from './Navbar'
+import howl from '../../images/howl.jpg'
+import Footer from '../Footer'
+import howlAudio from '../../audio/how-finale.mp3'
+import Navbar from '../Navbar'
 
 function Adverb(){
 

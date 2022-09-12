@@ -1,9 +1,9 @@
 import React from 'react'
 // import { useNavigate } from 'react-router-dom'
-import chihiro from '../images/chihiro-final.jpg'
-import Footer from './Footer'
-import chihiroAudio from '../audio/spirited-away-final.mp3'
-import Navbar from './Navbar'
+import chihiro from '../../images/chihiro-final.jpg'
+import Footer from '../Footer'
+import chihiroAudio from '../../audio/spirited-away-final.mp3'
+import Navbar from '../Navbar'
 
 function Adjective(){
 
