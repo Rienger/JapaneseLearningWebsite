@@ -17,6 +17,7 @@ function Kanji() {
     const [kanjiLevel, setKanjiLevel] = useState(n5Kanji)
     const [dropdownBtnActive, setDropdownBtnActive] = useState('N5 (beginner)')
     const [displayMouseOver, setDisplayMouseOver] = useState([])
+    const [clickActive, setClickActive] = useState(false)
 
     useEffect(()=> {
         const handler = (e) => {
@@ -88,24 +89,39 @@ function Kanji() {
                                 </div>
                             
                             
-                        </div>                     
+                        </div>
+
+                         {/* create a filter search */}
+                        <div className='kanji-input-filter'>
+                        <input placeholder='search...'></input>  
+                        </div>
+                                       
                     </div>
                 </div>
 
                 
                 
-                <div className='kanji-content'>
-                    <div className='kanji-characters'>               
-                        {kanjiLevel.map((value)=>
-                            <div>
-                                <div  className='kanji-column'>           
-                                {value.column.map((values)=>       
-                                    <p onMouseOver={()=> {setDisplayMouseOver(values.explanation)}} onMouseLeave={()=> {setDisplayMouseOver([])}}>{values.kanji}</p>      
-                                )}                
-                                </div>
-                            </div>
-                        )}                
-                    </div>  
+        <div className='kanji-content'>
+
+<div className='kanji-characters'>               
+{kanjiLevel.map((value)=>
+    <div>
+        <div  className='kanji-column'>           
+        {value.column.map((values)=>       
+            <p 
+            // onMouseClick={()=> {setDisplayMouseOver(values.explanation)
+            //                     console.log(clickActive)
+            // }}
+            onMouseOver={() => setDisplayMouseOver(values.explanation)} 
+       
+            onMouseLeave={() => setDisplayMouseOver([])}
+            >{values.kanji}
+            </p>      
+        )}                
+        </div>
+    </div>
+)}                
+</div>  
 
                     <div className='kanji-explanation'>
                         <div className='kanji-explanation-card'>

@@ -18,7 +18,7 @@ function Navbar(){
 
         <div className='abs-left'>
             <div className='nav-inline'>
-            <NavLink className='link' exact to='/home' activeClassName="active">
+            <NavLink className='link' exact to='/' activeClassName="active">
             <img src={logo} alt='logo' className='navbar-logo'></img>
             </NavLink>
             </div>

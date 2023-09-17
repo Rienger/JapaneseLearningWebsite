@@ -1,6 +1,6 @@
 import React from 'react'
 import Verify from './Verify';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom'
 import Display from './Display';
 import Flashcard from './Flashcard'
 import Card from './Card'
@@ -26,6 +26,7 @@ import Adjective from './ADJECTIVE/Adjective';
 import Adverb from './ADVERB/Adverb';
 
 import Kanji from './KANJI/Kanji';
+import KanaTest from './KanaTest';
 
 
 
@@ -37,15 +38,22 @@ function App(){
             <Routes>
 
             
-                <Route path='/' element={<Verify />}></Route>
-                <Route path='/home' element={<Home />}></Route>
+                {/* <Route path='/' element={<Verify />}></Route> */}
+       
+                {/* <Route path='/home' element={<Home />}></Route> */}
+
+                <Route path='/' element={<Home />}></Route>
                 <Route path='/table' element={<Display />}></Route>  
                 <Route path='/flashcard' element={<Flashcard />}></Route>
                 <Route path='/card' element={<Card />}></Route>
                 <Route path='/random' element={<Random />}></Route>
                 <Route path='/reading' element={<Reading />}></Route>
                 <Route path='/challenge' element={<Challenge />}></Route>
+
                 <Route path='/kana' element={<Kana />}></Route>
+                <Route path='/kana/test' element={<KanaTest />}></Route>
+
+
                 <Route path='/quotes' element={<Quotes />}></Route>
                 <Route path='/pos' element={<Partsofspeech />}></Route>
 

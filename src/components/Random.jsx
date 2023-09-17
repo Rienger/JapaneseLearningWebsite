@@ -4,6 +4,7 @@ import Footer from './Footer';
 import {dictionaryJapanese, dictionaryEnglish, tense, simplePast, politeForm, teForm, simpleNegative} from '../verb-contents'
 import Navbar from './Navbar';
 import {FiHelpCircle} from 'react-icons/fi'
+// import {toHiragana} from 'wanakana'
 
 
 
@@ -28,7 +29,7 @@ function Random(){
   const [teForms, setTeForms] = useState(teForm[initialRandom])
   const [simpleNegatives, setSimpleNegatives] = useState(simpleNegative[initialRandom])
   
- 
+  // const [transformHiragana, setTransformHiragana] = useState()
 
 
   function dictionaryForm(){
@@ -103,7 +104,8 @@ function Random(){
  
 
   function onChange(e){
-    setInput(e.target.value)   
+    setInput(e.target.value)
+    // setTransformHiragana(toHiragana(e.target.value))   
   }
 
 

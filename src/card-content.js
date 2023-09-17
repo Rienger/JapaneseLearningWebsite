@@ -1,5 +1,6 @@
 
-let arrayEnglish = ['dream', 'to believe', 'strong', 'relationship', 'new',
+let arrayEnglish = [
+'dream', 'to believe', 'strong', 'relationship', 'new',
 'correct', 'working person', 'major', 'tough', 'lol',
 'practice', 'wrong', 'to think', 'to forget', 'easy',
 "let's do a test", 'how are you doing?', 'important', 'correct',
@@ -89,7 +90,8 @@ let arrayEnglish = ['dream', 'to believe', 'strong', 'relationship', 'new',
 
 
 
-let arrayNihongo = ['ゆめ', 'しんじる', 'つよい', 'かんけい', 'あたらしい',
+let arrayNihongo = [
+'ゆめ', 'しんじる', 'つよい', 'かんけい', 'あたらしい',
 'せいかい', 'しゃかいじん', 'せんこう', 'たいへん', 'わら', 
 'れんしゅう', 'まちがい', 'かんがえる', 'わすれる', 'かんたん',
 'テストー を しましょう', 'ちょうし は どう', 'じゅうよう', 'あってる', 
@@ -172,7 +174,44 @@ let arrayNihongo = ['ゆめ', 'しんじる', 'つよい', 'かんけい', 'あ�
 'どうが', 'りょうかい','とりま'
 ]
 
+let arrayKanjiN5 = [
+'一', '二', '三', '四', '五',
+'六', '七', '八', '九', '十',
+'百', '千', '万', '土', '水',
+'火', '山', '川', '木', '金',
+'雨', '電き', '生きる', '人', '男',
+'女', '父', '母', '子', '友だち',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+// '', '', '', '', '',
+]
+
+let arrayHiraganaN5 = [
+'いち | one', 'に | two', 'さん | three', 'し/よん | four', 'ご | five',
+'ろく | six', 'しち/なな | seven', 'はち | eight', 'きゅう | nine', 'じゅう | ten',
+'ひゃく | one hundred', 'せん | one thousand', 'まん | (n) thousand', 'ど | soil', 'みず | water',
+'ひ | fire', 'やま | mountain', 'かわ | river', 'き | tree', 'きん | gold',
+'あめ | rain', 'でんき | electricity', 'いきる | to live', 'ひと | person', 'おとこ | man',
+'おんあ | woman', 'ちち | father', 'はは | mother', 'こ | child', 'ともだち | friend',
+'', '', '', '', '',
+'', '', '', '', '',
+]
+
+let arrayKanjiN4 = ['元気']
+
+let arrayHiraganaN4 = ['げんき / healthy']
 
 
-
-export {arrayEnglish, arrayNihongo};
+export {arrayEnglish, arrayNihongo, arrayKanjiN5, arrayHiraganaN5, arrayKanjiN4, arrayHiraganaN4};
